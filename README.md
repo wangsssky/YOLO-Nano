@@ -1,6 +1,6 @@
 # Introduction
-YOLO Nano: a Highly Compact You Only Look Once Convolutional Neural Network for Object Detection. [paper](https://arxiv.org/abs/1910.01271).
-This repo is based on [liux0614]( https://github.com/liux0614/yolo_nano).
+- YOLO Nano: a Highly Compact You Only Look Once Convolutional Neural Network for Object Detection. [paper](https://arxiv.org/abs/1910.01271).
+- This repo is based on [liux0614]( https://github.com/liux0614/yolo_nano).
 
 # Project Structure
 <pre>
