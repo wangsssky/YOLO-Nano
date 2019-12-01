@@ -27,6 +27,6 @@ pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&sub
 
 To train on COCO dataset:
 ```bash
-python3 main.py --dataset_path datasets/coco/images --annotation_path datasets/URPC/annotations 
+python3 main.py --dataset_path datasets/coco/images --annotation_path datasets/coco/annotations 
                 --dataset coco --conf_thresh=0.8 --gpu
 ```
