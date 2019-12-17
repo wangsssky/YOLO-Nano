@@ -6,7 +6,7 @@ from terminaltables import AsciiTable
 
 def train(model, optimizer, dataloader, epoch, opt, logger, best_mAP=0):
     for i, (images, targets) in enumerate(dataloader):
-
+	model.train()
         # targets: [idx, class_id, x, y, h, w] in yolo format
         # idx is used to associate the bounding boxes with its image
         # skip images without bounding boxes (mainly because coco has unlabelled images) 

@@ -16,6 +16,7 @@ def val(model,optimizer,dataloader,epoch,opt,val_logger,best_mAP=0):
     sample_matrics = []
     if opt.gpu:
         model = model.to(opt.device)
+    model.eval()
 
     for i, (images, targets) in enumerate(dataloader):
         labels += targets[:, 1].tolist()
