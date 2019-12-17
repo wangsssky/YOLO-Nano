@@ -51,7 +51,7 @@ def conv3x3(input_channels, output_channels, stride=1, bn=True, instance_norm=Fa
                 stride=stride, padding=1, bias=False)
 
 
-def sepconv3x3(input_channels, output_channels, stride=1, expand_ratio=1):
+def sepconv3x3(input_channels, output_channels, stride=1, expand_ratio=3):
     return nn.Sequential(
         # pw
         nn.Conv2d(
