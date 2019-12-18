@@ -62,6 +62,7 @@ class Opt():
         self.parser.add_argument("--no_train", action="store_true", default=False, help="training")
         self.parser.add_argument("--no_val", action="store_true", default=False, help="validation")
         self.parser.add_argument("--test", default=False, help="test")
+        self.parser.add_argument("--pretrained", action="store_true", default=False, help="load model pretrained with other dataset")
 
         self.initialized = True
 

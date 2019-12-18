@@ -85,10 +85,19 @@ if __name__ == "__main__":
         checkpoint = torch.load(opt.resume_path)
         assert opt.model == checkpoint['model']
 
+        if opt.pretrained:
+            model_dict = model.state_dict()
+            passed_dict = ['conv9.weight','conv10.weight','conv11.weight']
+            new_state_dict = OrderedDict()
+            new_state_dict = {k: v for k,v in checkpoint['state_dict'].items() if k not in passed_dict}
+            model_dict.update(new_state_dict)
+            model.load_state_dict(model_dict)
+        else:
+            model.load_state_dict(checkpoint['state_dict'])
+
         opt.begin_epoch = checkpoint['epoch']
-        model.load_state_dict(checkpoint['state_dict'])
         model = model.to(opt.device)
-        if not opt.no_train:
+        if not opt.no_train and not opt.pretrained:
             optimizer.load_state_dict(checkpoint['optimizer'])
         best_mAP = checkpoint["best_mAP"]
 
