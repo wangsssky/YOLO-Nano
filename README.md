@@ -30,3 +30,8 @@ To train on COCO dataset:
 python3 main.py --dataset_path datasets/coco/images --annotation_path datasets/coco/annotations 
                 --dataset coco --conf_thresh=0.8 --gpu
 ```
+
+#Convert to onnx
+- cd deploy, run convert2onnx.py
+- run python -m onnxsim yolo-nano.onnx simplified.onnx, maybe you should install onnx-simplifier first.
+- try run_onnx.py, test it by onnx runtime
