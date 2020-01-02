@@ -33,5 +33,5 @@ python3 main.py --dataset_path datasets/coco/images --annotation_path datasets/c
 
 # Convert to onnx
 - cd deploy, run convert2onnx.py
-- run python -m onnxsim yolo-nano.onnx simplified.onnx, maybe you should install onnx-simplifier first.
+- run ```python -m onnxsim yolo-nano.onnx simplified.onnx```, you may install onnx-simplifier first.
 - try run_onnx.py, test it by onnx runtime
